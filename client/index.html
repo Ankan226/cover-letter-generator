@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letterhead — AI Cover Letter Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header class="masthead">
+      <p class="eyebrow">Draft &rarr; Send</p>
+      <h1 class="masthead__title">Letterhead</h1>
+      <p class="masthead__subtitle">Fill in the details. We'll draft the letter.</p>
+    </header>
+
+    <section class="layout">
+
+      <form id="letter-form" class="panel form-panel">
+
+        <div class="field">
+          <label for="candidate-name">Your name</label>
+          <input id="candidate-name" type="text" placeholder="Ankan Das" required />
+        </div>
+
+        <div class="field">
+          <label for="job-role">Job role</label>
+          <input id="job-role" type="text" placeholder="Frontend Engineer" required />
+        </div>
+
+        <div class="field">
+          <label for="target-company">Target company</label>
+          <input id="target-company" type="text" placeholder="Acme Corp" required />
+        </div>
+
+        <div class="field">
+          <label for="key-skills">Key skills <span class="hint">(comma separated)</span></label>
+          <textarea id="key-skills" rows="3" placeholder="JavaScript, React, REST APIs" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="resume-upload">Resume <span class="hint">(optional, PDF)</span></label>
+          <input id="resume-upload" type="file" accept="application/pdf" />
+          <p id="resume-status" class="resume-status"></p>
+        </div>
+
+        <div class="mode-switch" role="radiogroup" aria-label="Generation mode">
+          <button type="button" id="mode-demo" class="mode-btn mode-btn--active" data-mode="demo">
+            Demo Mode
+          </button>
+          <button type="button" id="mode-ai" class="mode-btn" data-mode="ai">
+            AI Mode
+          </button>
+        </div>
+        <p class="mode-explainer" id="mode-explainer">
+          Demo Mode fills a template locally — no API calls, works offline.
+        </p>
+
+        <button type="submit" class="btn btn--primary">Generate Letter</button>
+      </form>
+
+      <section class="panel output-panel" aria-live="polite">
+        <div id="output-status" class="status" hidden></div>
+        <div id="output-empty" class="output-empty">
+          Your letter will appear here.
+        </div>
+        <div id="output-result" class="output-result" hidden>
+          <div class="output-result__toolbar">
+            <button type="button" id="copy-btn" class="btn btn--ghost">Copy to Clipboard</button>
+            <span id="copy-confirm" class="copy-confirm" hidden>Copied!</span>
+          </div>
+          <div id="letter-text" class="letter-text"></div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/pdf-parser.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
