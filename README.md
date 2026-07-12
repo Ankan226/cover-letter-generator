@@ -5,6 +5,7 @@ A cover letter generator with two modes: a fully offline **Demo Mode**
 a real LLM through a small backend — never directly from the browser.
 
 **Live demo:** https://cover-letter-generator-ankan.netlify.app
+
 **Backend health check:** https://cover-letter-generator-pb95.onrender.com/health
 
 ## Why there's a backend at all
@@ -129,7 +130,8 @@ model more context for a personalized letter.
 ## Screenshots
 
 ### 1. Demo Mode
-![Demo mode result](screenshots/demo-mode.png)
+<img width="1237" height="912" alt="image" src="https://github.com/user-attachments/assets/39949c1c-c437-4994-bd87-f76445f76c87" />
+
 
 ### 2. AI Mode (live, via OpenRouter)
-![AI mode result](screenshots/ai-mode-result.png)
+<img width="1227" height="913" alt="image" src="https://github.com/user-attachments/assets/00d68897-cc3c-4764-b3ca-a33d236192bb" />
