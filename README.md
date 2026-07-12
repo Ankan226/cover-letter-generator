@@ -61,7 +61,6 @@ cover-letter-generator/
 │   ├── promptBuilder.js     # isolated prompt-engineering logic
 │   ├── package.json
 │   └── .env.example         # template — copy to .env, never commit .env
-├── screenshots/
 ├── .gitignore                # excludes .env from day one
 ├── Prompts.md
 └── README.md
