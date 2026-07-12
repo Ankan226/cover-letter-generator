@@ -1,4 +1,4 @@
-const BACKEND_BASE = "http://localhost:3000";
+const BACKEND_BASE = "https://cover-letter-generator-pb95.onrender.com";
 
 class GenerationError extends Error {
   constructor(message) {
