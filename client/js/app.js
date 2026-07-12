@@ -67,7 +67,7 @@ const modeExplainer = document.getElementById("mode-explainer");
 
 const MODE_COPY = {
   demo: "Demo Mode fills a template locally — no API calls, works offline.",
-  ai: "AI Mode sends your details to our backend, which asks Gemini to write the letter (takes a few seconds).",
+  ai: "AI Mode sends your details to our backend, which asks an AI model to write the letter (takes a few seconds).",
 };
 
 function setMode(mode) {
