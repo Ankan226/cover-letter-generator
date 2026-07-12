@@ -118,14 +118,6 @@ browser** using pdf.js — the PDF itself is never uploaded anywhere. Only
 the extracted text is sent along with the AI Mode request, to give the
 model more context for a personalized letter.
 
-## Security checklist
-
-- [x] `server/.env` is listed in `.gitignore` from the very first commit
-- [x] Only `.env.example` (no real key) is ever committed
-- [x] `git log --all --full-history -- "*.env"` returns nothing — verified
-- [x] The real key lives only in Render's environment variable dashboard
-      for the deployed version
-
 ## Screenshots
 
 ### 1. Demo Mode
